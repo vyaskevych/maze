@@ -1,0 +1,136 @@
+h1,
+h2,
+p,
+a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid blue;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.wall {
+  background-color: blue;
+}
+
+.visited {
+  background-color: lightyellow;
+}
+
+.visited::after {
+  content: '\2022';
+}
+
+.start::after {
+  content: '\25EF';
+  color: red;
+  font-weight: bold;
+}
+
+.end::after {
+  content: '\25EF';
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.visited.start::after,
+.visited.end::after {
+  content: '\2299';
+}
+
+ul {
+  list-style-type: none;
+  margin: 50;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkblue;
+  display: flex;
+}
+
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+  margin-left: auto;
+  /* Робимо останній елемент flex контейнера вправо */
+}
+
+li button {
+  margin: 10px;
+}
+
+li a {
+  display: block;
+  color: rgb(250, 242, 226);
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: darkorange;
+}
+
+li a.successful::after {
+  content: '✅';
+  color: green;
+}
+
+li a.error::after {
+  content: '❌';
+  color: darkred;
+}
+
+table {
+  display: none;
+}
+
+table:target {
+  display: table;
+}
+
+
+/*загальний вигляд сторінки*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.task {
+  border-right: 1px solid rgb(150, 150, 150);
+  max-width: 45vw;
+  padding: 5px;
+  margin-right: 15px;
+  overflow: auto;
+  resize: horizontal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* .work {
+  min-width: 300px;
+  max-width: 100vw;
+  overflow-x: auto;
+  resize: horizontal; 
+  align-self: stretch;
+
+} */
+
+.solution {
+  flex-grow: 1;
+}
