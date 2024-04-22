@@ -4,17 +4,15 @@ import { createEntity } from './src/utils.js';
 
 
 // import traverseMaze from './emptyMazeTask.js';
-import { emptyMaze1, emptyMaze2, emptyMaze3, emptyMaze4, emptyMaze5, } from './src/mazes/empty.js';
+import { snakeMaze1, snakeMaze2, snakeMaze3 } from './src/mazes/snake.js';
 const appDiv = document.getElementById('app');
 const btnStart = document.getElementById('start');
 const resultDiv = document.getElementById('result'); //?
 const menuLinks = document.querySelectorAll('.menu a');
 const entities = [
-    emptyMaze1,
-    emptyMaze2,
-    emptyMaze3,
-    emptyMaze4,
-    emptyMaze5,
+    snakeMaze1,
+    snakeMaze2,
+    snakeMaze3,
 ].map(createEntity);
 entities.forEach(({ display }) => appDiv.append(display.fillTable()));
 window.location.hash = 'maze_1';
@@ -57,11 +55,9 @@ btnStart.addEventListener('click', async () => {
     window.location.hash = hashName;
     readEditor();
     const entities = [
-        emptyMaze1,
-        emptyMaze2,
-        emptyMaze3,
-        emptyMaze4,
-        emptyMaze5,
+        snakeMaze1,
+        snakeMaze2,
+        snakeMaze3,        
     ].map(createEntity);
     entities.forEach(({ display }) => appDiv.append(display.fillTable()));
     entities.forEach(({ display, robot, maze }, i) => {
