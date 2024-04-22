@@ -21,6 +21,9 @@ window.location.hash = 'maze_1';
 
 let traverseMaze;
 
+var out = document.getElementById("outRes");
+
+
 export function readEditor() {
     var bodyOfFunc = editor.getValue();
     try {
