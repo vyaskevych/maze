@@ -25,6 +25,7 @@ export function readEditor() {
     var bodyOfFunc = editor.getValue();
     try {
         traverseMaze = createFunc(bodyOfFunc);
+        out.innerHTML = "";
     } catch (e) {
         out.innerHTML = "<p style='color: red;'>Error: " + e + "</p>";
     }

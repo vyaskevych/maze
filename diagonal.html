@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лабіринт змійка</title>
+  <title>Лабіринт діагональ</title>
   <link rel="shortcut icon" href="img/favicon (1).ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@
       <section class="description"><p>У проекті є кілька фіксованих лабіринтів. У кожному лабіринті ви маєте довести робота до виходу – клітини, поміченої зеленим кружком.
         Сам лабіринт не відомий і робота немає сенсорів, щоб його дослідити, але відомий тип лабіринту і його розміри.
         Цього достатньо, щоби побудувати маршрут і віддати потрібні команди роботу.</p>
-        <p>У цій задачі лабіринт у вигляді змійки, у якій з верхнього лівого кута з координатами (1, 1) потрібно пройти лівий нижній з координатами (1, height-2).
+        <p>У цій задачі лабіринт у вигляді діагоналі, у якій з верхнього лівого кута з координатами (1, 1) потрібно пройти у правий нижній кут з координатами (width-2, height-2).
         Щоб рухати робота використовуйте</p><pre>
         robot.moveTo(Direction.Right);
         robot.moveTo(Direction.Down);
@@ -52,9 +52,9 @@ function traverseMaze(robot, width, height) {
     </div>
     <div class="solution">
       <ul class="menu">
-        <li><a class="active" href="#maze_1">snake 1</a></li>
-        <li><a href="#maze_2">snake 2</a></li>
-        <li><a href="#maze_3">snake 3</a></li>
+        <li><a class="active" href="#maze_1">diagonal 1</a></li>
+        <li><a href="#maze_2">diagonal 2</a></li>
+        <li><a href="#maze_3">diagonal 3</a></li>
         <li><button id="start">Start</button></li>
       </ul>
       <div id="app">
@@ -72,7 +72,7 @@ function traverseMaze(robot, width, height) {
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="settings.js"></script>
 
-  <script src="snake.js" type="module"></script>
+  <script src="diagonal.js" type="module"></script>
 </body>
 
 </html>

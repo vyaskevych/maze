@@ -4,17 +4,15 @@ import { createEntity } from './src/utils.js';
 
 
 // import traverseMaze from './emptyMazeTask.js';
-import { emptyMaze1, emptyMaze2, emptyMaze3, emptyMaze4, emptyMaze5, } from './src/mazes/empty.js';
+import { diagonalMaze1, diagonalMaze2, diagonalMaze3 } from './src/mazes/diagonal.js';
 const appDiv = document.getElementById('app');
 const btnStart = document.getElementById('start');
 const resultDiv = document.getElementById('result'); //?
 const menuLinks = document.querySelectorAll('.menu a');
 const entities = [
-    emptyMaze1,
-    emptyMaze2,
-    emptyMaze3,
-    emptyMaze4,
-    emptyMaze5,
+    diagonalMaze1,
+    diagonalMaze2,
+    diagonalMaze3,
 ].map(createEntity);
 entities.forEach(({ display }) => appDiv.append(display.fillTable()));
 window.location.hash = 'maze_1';
@@ -22,7 +20,6 @@ window.location.hash = 'maze_1';
 let traverseMaze;
 
 var out = document.getElementById("outRes");
-
 
 export function readEditor() {
     var bodyOfFunc = editor.getValue();
@@ -61,11 +58,9 @@ btnStart.addEventListener('click', async () => {
     window.location.hash = hashName;
     readEditor();
     const entities = [
-        emptyMaze1,
-        emptyMaze2,
-        emptyMaze3,
-        emptyMaze4,
-        emptyMaze5,
+        diagonalMaze1,
+        diagonalMaze2,
+        diagonalMaze3,
     ].map(createEntity);
     entities.forEach(({ display }) => appDiv.append(display.fillTable()));
     entities.forEach(({ display, robot, maze }, i) => {
