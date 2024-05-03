@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабіринт діагональ</title>
+  <link rel="shortcut icon" href="img/favicon (1).ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Robot goes through a maze</h1>
+  <div class="container">
+    <div class="task">
+      <section class="description"><p>У проекті є кілька фіксованих лабіринтів. У кожному лабіринті ви маєте довести робота до виходу – клітини, поміченої зеленим кружком.
+        Сам лабіринт не відомий і робота немає сенсорів, щоб його дослідити, але відомий тип лабіринту і його розміри.
+        Цього достатньо, щоби побудувати маршрут і віддати потрібні команди роботу.</p>
+        <p>У цій задачі лабіринт у вигляді піраміди, у якій з нижнього лівого кута з координатами (1, height-2) потрібно пройти у верхній ряд.
+        Щоб рухати робота використовуйте</p><pre>
+        robot.moveTo(Direction.Right);
+        robot.moveTo(Direction.Down);
+        robot.moveTo(Direction.Left);
+        robot.moveTo(Direction.Up);</pre>
+        Для отримання координат робота<pre>
+        robot.x;
+        robot.y;</pre>
+        Для перевірки, чи фінішував робот<pre>
+        robot.finished;</pre></section>
+      <section class="work">
+
+        <pre id="editor">
+function traverseMaze(robot, width, height) {
+  //enter your code below
+  
+}
+</pre>
+        <br>
+        <select name="" id="selectTheme">
+          <option value="">chrome</option>
+          <option value="">monokai</option>
+          <option value="">twilight</option>
+          <option value="">eclipse</option>
+          <option value="">cobalt</option>
+        </select>
+        <input type="number" name="" id="font_size" min=1>
+        <!-- <input type="button" id="goTest" value="Перевірити">
+        <input type="button" id="loadLast" value="Відновити"> -->
+        <br>
+      </section>
+      <div id="outRes"></div>
+    </div>
+    <div class="solution">
+      <ul class="menu">
+        <li><a class="active" href="#maze_1">pyramid 1</a></li>
+        <li><a href="#maze_2">pyramid 2</a></li>
+        <li><a href="#maze_3">pyramid 3</a></li>
+        <li><a href="#maze_4">pyramid 4</a></li>
+        <li><button id="start">Start</button></li>
+      </ul>
+      <div id="app">
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+  <p></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/ace.min.js"
+    integrity="sha512-kiECX53fzPhY5cnGzxTUZUOefsjR7gY3SD2OOgcsxZ0nAMZ3e+lkqxhXzGAFm05KjIaQ49/OyNryGTcbLb2V9w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/ext-beautify.min.js"
+    integrity="sha512-uXfi0GwpQZcHIhGOMMHeNYtBSjt7qDXjXHmjShWSp+RWMSmjdy69N7M/pufinvQLv6rSYlpbSXqSnLRzWE952w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="settings.js"></script>
+
+  <script src="pyramid.js" type="module"></script>
+</body>
+
+</html>
